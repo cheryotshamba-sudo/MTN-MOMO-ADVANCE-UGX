@@ -10,61 +10,60 @@
     box-sizing:border-box;
 }
 
-html,
-body{
+html,body{
     width:100%;
-    min-height:100%;
+    height:100%;
 }
 
 body{
-    min-height:100vh;
     background:#FFF8D6;
     font-family:'Mali',cursive;
     color:#111;
+    overflow:hidden;
 }
 
 .container{
-    width:92%;
+    width:94%;
     max-width:480px;
     margin:auto;
 }
 
+/* HEADER */
+
 header{
     background:#FFCC00;
     color:#111;
-    padding:22px 0;
+    padding:12px 0;
     text-align:center;
-    border-bottom:3px solid #111;
+    border-bottom:2px solid #111;
 }
 
 .logo{
-    font-size:24px;
+    font-size:21px;
     font-weight:700;
 }
 
 .brand{
-    margin-top:4px;
+    margin-top:1px;
     font-family:Arial,sans-serif;
-    font-size:12px;
+    font-size:10px;
     font-weight:600;
 }
 
-main{
-    padding-bottom:25px;
-}
+/* CARD */
 
 .card{
     background:#fff;
-    margin-top:24px;
-    padding:22px 18px 18px;
-    border-radius:14px;
-    box-shadow:0 3px 12px rgba(0,0,0,.10);
+    margin-top:10px;
+    padding:14px 12px 12px;
+    border-radius:12px;
+    box-shadow:0 2px 8px rgba(0,0,0,.10);
     border:1px solid #E5D36A;
 }
 
 h1{
-    font-size:22px;
-    margin-bottom:9px;
+    font-size:19px;
+    margin-bottom:4px;
     color:#111;
     font-weight:700;
 }
@@ -72,27 +71,28 @@ h1{
 .description{
     color:#555;
     font-family:Arial,sans-serif;
-    font-size:14px;
-    line-height:1.5;
-    margin-bottom:20px;
+    font-size:12px;
+    line-height:1.3;
+    margin-bottom:11px;
 }
+
+/* AMOUNT OPTIONS */
 
 .options{
     display:grid;
     grid-template-columns:1fr 1fr;
-    gap:11px;
+    gap:7px;
 }
 
 .limit-option{
     width:100%;
     background:#fff;
-    border:1px solid #DDD;
-    border-radius:10px;
-    padding:15px 12px;
+    border:1px solid #D8D8D8;
+    border-radius:8px;
+    padding:9px 8px;
     cursor:pointer;
     text-align:left;
     font-family:'Mali',cursive;
-    transition:.15s ease;
 }
 
 .limit-option:hover{
@@ -105,33 +105,38 @@ h1{
 }
 
 .limit{
-    font-size:16px;
+    font-size:13px;
     font-weight:700;
     color:#111;
 }
 
 .fee{
-    margin-top:5px;
+    margin-top:2px;
     font-family:Arial,sans-serif;
-    font-size:12px;
+    font-size:10px;
     color:#666;
 }
+
+/* SELECTED */
 
 .selected{
     border:2px solid #111;
     background:#FFF3A6;
+    padding:8px 7px;
 }
+
+/* CONTINUE */
 
 .continue-btn{
     width:100%;
-    margin-top:20px;
-    padding:15px;
+    margin-top:11px;
+    padding:11px;
     border:none;
-    border-radius:12px;
+    border-radius:9px;
     background:#FFCC00;
     color:#111;
     font-family:'Mali',cursive;
-    font-size:16px;
+    font-size:14px;
     font-weight:700;
     cursor:pointer;
 }
@@ -142,27 +147,15 @@ h1{
     cursor:not-allowed;
 }
 
-.notice{
-    margin-top:16px;
-    padding:13px;
-    background:#FFF8D6;
-    border-left:4px solid #FFCC00;
-    border-radius:7px;
-    color:#555;
-    font-family:Arial,sans-serif;
-    font-size:12px;
-    line-height:1.5;
-}
+/* FOOTER */
 
 footer{
     text-align:center;
-    padding:22px 10px;
+    padding:9px 5px;
     color:#111;
-    background:#FFCC00;
-    border-top:3px solid #111;
     font-family:Arial,sans-serif;
-    font-size:12px;
-    line-height:1.7;
+    font-size:9px;
+    line-height:1.4;
 }
 
 footer a{
@@ -171,26 +164,57 @@ footer a{
     font-weight:600;
 }
 
+/* SMALL PHONES */
+
 @media(max-width:360px){
 
     .logo{
-        font-size:21px;
+        font-size:19px;
+    }
+
+    header{
+        padding:10px 0;
     }
 
     .card{
-        padding:20px 14px 16px;
+        margin-top:8px;
+        padding:12px 10px 10px;
+    }
+
+    h1{
+        font-size:17px;
+    }
+
+    .description{
+        font-size:11px;
+        margin-bottom:8px;
+    }
+
+    .options{
+        gap:6px;
     }
 
     .limit-option{
-        padding:13px 10px;
+        padding:8px 7px;
     }
 
     .limit{
-        font-size:15px;
+        font-size:12px;
     }
 
     .fee{
-        font-size:11px;
+        font-size:9px;
+    }
+
+    .continue-btn{
+        margin-top:9px;
+        padding:10px;
+        font-size:13px;
+    }
+
+    footer{
+        padding-top:7px;
+        font-size:8px;
     }
 }
 </style></head><body><header>
@@ -207,7 +231,7 @@ footer a{
 </header><main class="container"><section class="card"><h1>Select Your Desired Limit</h1>
 
 <p class="description">
-    Choose your preferred loan limit below to continue with your application.
+    Choose your preferred loan limit below to continue.
 </p>
 
 <div class="options">
@@ -217,114 +241,72 @@ footer a{
             data-limit="1228500"
             data-fee="95100">
 
-        <div class="limit">
-            UGX 1,228,500
-        </div>
-
-        <div class="fee">
-            Fee: UGX 95,100
-        </div>
+        <div class="limit">UGX 1,228,500</div>
+        <div class="fee">Fee: UGX 95,100</div>
 
     </button>
-
 
     <button type="button"
             class="limit-option"
             data-limit="1363500"
             data-fee="98100">
 
-        <div class="limit">
-            UGX 1,363,500
-        </div>
-
-        <div class="fee">
-            Fee: UGX 98,100
-        </div>
+        <div class="limit">UGX 1,363,500</div>
+        <div class="fee">Fee: UGX 98,100</div>
 
     </button>
-
 
     <button type="button"
             class="limit-option"
             data-limit="1498500"
             data-fee="108100">
 
-        <div class="limit">
-            UGX 1,498,500
-        </div>
-
-        <div class="fee">
-            Fee: UGX 108,100
-        </div>
+        <div class="limit">UGX 1,498,500</div>
+        <div class="fee">Fee: UGX 108,100</div>
 
     </button>
-
 
     <button type="button"
             class="limit-option"
             data-limit="1700500"
             data-fee="125100">
 
-        <div class="limit">
-            UGX 1,700,500
-        </div>
-
-        <div class="fee">
-            Fee: UGX 125,100
-        </div>
+        <div class="limit">UGX 1,700,500</div>
+        <div class="fee">Fee: UGX 125,100</div>
 
     </button>
-
 
     <button type="button"
             class="limit-option"
             data-limit="2100500"
             data-fee="180100">
 
-        <div class="limit">
-            UGX 2,100,500
-        </div>
-
-        <div class="fee">
-            Fee: UGX 180,100
-        </div>
+        <div class="limit">UGX 2,100,500</div>
+        <div class="fee">Fee: UGX 180,100</div>
 
     </button>
-
 
     <button type="button"
             class="limit-option"
             data-limit="4524500"
             data-fee="250100">
 
-        <div class="limit">
-            UGX 4,524,500
-        </div>
-
-        <div class="fee">
-            Fee: UGX 250,100
-        </div>
+        <div class="limit">UGX 4,524,500</div>
+        <div class="fee">Fee: UGX 250,100</div>
 
     </button>
-
 
     <button type="button"
             class="limit-option"
             data-limit="6658500"
             data-fee="300100">
 
-        <div class="limit">
-            UGX 6,658,500
-        </div>
-
-        <div class="fee">
-            Fee: UGX 300,100
-        </div>
+        <div class="limit">UGX 6,658,500</div>
+        <div class="fee">Fee: UGX 300,100</div>
 
     </button>
 
 </div>
-
 
 <button
     type="button"
@@ -336,23 +318,15 @@ footer a{
 
 </button>
 
-
-<div class="notice">
-    Please review the selected amount and applicable fee before continuing.
-</div>
-
 </section></main><footer><a href="#">Terms &amp; Conditions</a>
 &nbsp; | &nbsp;
-
 <a href="#">Privacy Policy</a>
 &nbsp; | &nbsp;
-
 <a href="#">Support</a>
 
-<br><br>
+<br>
 
-© 2026 Loan Application Portal.
-All rights reserved.
+© 2026 Loan Application Portal. All rights reserved.
 
 </footer><script>
 
@@ -364,9 +338,6 @@ const continueBtn =
 
 let selectedLimit = null;
 let selectedFee = null;
-
-
-/* SELECT LIMIT */
 
 options.forEach(option => {
 
@@ -388,15 +359,11 @@ options.forEach(option => {
 
         continueBtn.textContent =
             "Continue with UGX " +
-            Number(selectedLimit)
-            .toLocaleString();
+            Number(selectedLimit).toLocaleString();
 
     });
 
 });
-
-
-/* CONTINUE */
 
 continueBtn.addEventListener("click", () => {
 
