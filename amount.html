@@ -17,147 +17,142 @@ body{
 }
 
 body{
+    min-height:100vh;
     background:#FFF8D6;
-    color:#111;
     font-family:'Mali',cursive;
+    color:#111;
+}
+
+.container{
+    width:92%;
+    max-width:480px;
+    margin:auto;
 }
 
 /* HEADER */
 
 header{
-    width:100%;
     background:#FFCC00;
+    color:#111;
+    padding:22px 0;
     border-bottom:2px solid #111;
     text-align:center;
-    padding:14px 8px;
 }
 
 .logo{
-    font-size:22px;
-    line-height:1.15;
+    font-size:25px;
     font-weight:700;
 }
 
 .brand{
-    margin-top:3px;
-    font-family:Arial,sans-serif;
-    font-size:10px;
-    font-weight:600;
-}
-
-/* MAIN */
-
-main{
-    width:100%;
+    margin-top:4px;
+    font-size:13px;
+    opacity:.9;
 }
 
 /* CARD */
 
 .card{
-    width:100%;
     background:#fff;
-    padding:18px 12px 12px;
+    margin-top:20px;
+    padding:22px 18px 18px;
+    border-radius:14px;
+    box-shadow:0 3px 12px rgba(0,0,0,.08);
+    border:1px solid #E5D36A;
 }
 
-/* HEADING */
-
 h1{
-    font-size:21px;
-    line-height:1.15;
-    margin-bottom:5px;
+    font-size:22px;
+    margin-bottom:9px;
+    color:#111;
     font-weight:700;
 }
 
 .description{
+    color:#666;
     font-family:Arial,sans-serif;
-    color:#555;
-    font-size:12px;
-    line-height:1.3;
-    margin-bottom:13px;
+    font-size:14px;
+    line-height:1.5;
+    margin-bottom:20px;
 }
 
-/* OPTIONS */
+/* AMOUNT OPTIONS */
 
 .options{
-    width:100%;
     display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:8px;
+    grid-template-columns:1fr 1fr;
+    gap:11px;
 }
 
 .limit-option{
     width:100%;
-    min-height:72px;
-    padding:11px 9px;
     background:#fff;
     border:1px solid #D5D5D5;
-    border-radius:9px;
-    text-align:left;
+    border-radius:10px;
+    padding:15px;
     cursor:pointer;
+    text-align:left;
     font-family:'Mali',cursive;
 }
 
 .limit-option:hover{
-    background:#FFFBE8;
     border-color:#FFCC00;
-}
-
-.limit-option:active{
-    transform:scale(.98);
+    background:#FFFBE8;
 }
 
 .limit{
-    font-size:15px;
-    line-height:1.2;
+    font-size:17px;
     font-weight:700;
+    color:#111;
 }
 
 .fee{
     margin-top:5px;
     font-family:Arial,sans-serif;
+    font-size:13px;
     color:#666;
-    font-size:10px;
-    line-height:1.2;
 }
+
+/* SELECTED */
 
 .selected{
     border:2px solid #111;
     background:#FFF3A6;
-    padding:10px 8px;
 }
 
 /* CONTINUE */
 
 .continue-btn{
     width:100%;
-    height:48px;
-    margin-top:10px;
-    border:0;
-    border-radius:9px;
+    margin-top:20px;
+    padding:15px;
+    border:none;
+    border-radius:14px;
     background:#FFCC00;
     color:#111;
     font-family:'Mali',cursive;
-    font-size:15px;
+    font-size:16px;
     font-weight:700;
     cursor:pointer;
 }
 
 .continue-btn:disabled{
-    background:#E3D68D;
+    background:#FFCC00;
     color:#777;
+    cursor:not-allowed;
 }
 
 /* FOOTER */
 
 footer{
-    width:100%;
+    text-align:center;
+    padding:24px 10px;
+    color:#111;
     background:#FFCC00;
     border-top:2px solid #111;
-    text-align:center;
-    padding:10px 5px;
     font-family:Arial,sans-serif;
-    font-size:9px;
-    line-height:1.5;
+    font-size:12px;
+    line-height:1.7;
 }
 
 footer a{
@@ -166,337 +161,229 @@ footer a{
     font-weight:600;
 }
 
-/* SMALL PHONES */
+/* PHONE */
 
 @media(max-width:380px){
 
+    .container{
+        width:94%;
+    }
+
     header{
-        padding:11px 6px;
+        padding:18px 0;
     }
 
     .logo{
-        font-size:19px;
+        font-size:22px;
     }
 
     .brand{
-        font-size:9px;
-    }
-
-    .card{
-        padding:14px 9px 10px;
-    }
-
-    h1{
-        font-size:19px;
-    }
-
-    .description{
-        font-size:11px;
-        margin-bottom:10px;
-    }
-
-    .options{
-        gap:6px;
-    }
-
-    .limit-option{
-        min-height:63px;
-        padding:9px 7px;
-    }
-
-    .selected{
-        padding:8px 6px;
-    }
-
-    .limit{
-        font-size:13px;
-    }
-
-    .fee{
-        font-size:9px;
-        margin-top:3px;
-    }
-
-    .continue-btn{
-        height:44px;
-        margin-top:8px;
-        font-size:14px;
-    }
-
-    footer{
-        padding:7px 4px;
-        font-size:8px;
-    }
-}
-
-/* SHORT PHONES */
-
-@media(max-height:650px){
-
-    header{
-        padding:8px 5px;
-    }
-
-    .logo{
-        font-size:18px;
-    }
-
-    .brand{
-        font-size:8px;
-    }
-
-    .card{
-        padding:10px 8px 8px;
-    }
-
-    h1{
-        font-size:17px;
-        margin-bottom:3px;
-    }
-
-    .description{
-        font-size:10px;
-        margin-bottom:7px;
-    }
-
-    .options{
-        gap:5px;
-    }
-
-    .limit-option{
-        min-height:52px;
-        padding:7px 6px;
-    }
-
-    .selected{
-        padding:6px 5px;
-    }
-
-    .limit{
-        font-size:11px;
-    }
-
-    .fee{
-        font-size:8px;
-        margin-top:2px;
-    }
-
-    .continue-btn{
-        height:38px;
-        margin-top:6px;
         font-size:12px;
     }
 
-    footer{
-        padding:5px;
-        font-size:7px;
-    }
-}
-
-/* VERY SHORT PHONES */
-
-@media(max-height:560px){
-
-    header{
-        padding:5px;
-    }
-
-    .logo{
-        font-size:16px;
-    }
-
-    .brand{
-        display:none;
-    }
-
     .card{
-        padding:7px 6px 6px;
+        margin-top:15px;
+        padding:18px 14px 15px;
     }
 
     h1{
-        font-size:15px;
+        font-size:20px;
     }
 
     .description{
-        display:none;
+        font-size:13px;
+        margin-bottom:15px;
     }
 
     .options{
-        gap:4px;
+        gap:8px;
     }
 
     .limit-option{
-        min-height:44px;
-        padding:5px;
-    }
-
-    .selected{
-        padding:4px;
+        padding:12px;
     }
 
     .limit{
-        font-size:10px;
+        font-size:15px;
     }
 
     .fee{
-        font-size:7px;
-    }
-
-    .continue-btn{
-        height:34px;
-        margin-top:5px;
         font-size:11px;
     }
 
+    .continue-btn{
+        margin-top:15px;
+        padding:13px;
+        font-size:15px;
+    }
+
     footer{
-        display:none;
+        padding:18px 8px;
+        font-size:11px;
     }
 }
-</style></head><body><header><div class="logo">
-    LOAN APPLICATION PORTAL
+</style></head><body><header><div class="container">
+
+    <div class="logo">
+        LOAN APPLICATION PORTAL
+    </div>
+
+    <div class="brand">
+        Uganda Shillings (UGX)
+    </div>
+
 </div>
 
-<div class="brand">
-    Uganda Shillings (UGX)
-</div>
+</header><main class="container"><section class="card">
 
-</header><main><section class="card"><h1>Select Your Desired Limit</h1>
+    <h1>Select Your Desired Limit</h1>
 
-<p class="description">
-    Choose your preferred loan limit below to continue.
-</p>
+    <p class="description">
+        Choose your preferred loan limit
+    </p>
 
 
-<div class="options">
+    <div class="options">
 
-    <button type="button"
+        <button
+            type="button"
             class="limit-option"
             data-limit="1228500"
             data-fee="95100">
 
-        <div class="limit">
-            UGX 1,228,500
-        </div>
+            <div class="limit">
+                UGX 1,228,500
+            </div>
 
-        <div class="fee">
-            Fee: UGX 95,100
-        </div>
+            <div class="fee">
+                Fee: UGX 95,100
+            </div>
 
-    </button>
+        </button>
 
 
-    <button type="button"
+        <button
+            type="button"
             class="limit-option"
             data-limit="1363500"
             data-fee="98100">
 
-        <div class="limit">
-            UGX 1,363,500
-        </div>
+            <div class="limit">
+                UGX 1,363,500
+            </div>
 
-        <div class="fee">
-            Fee: UGX 98,100
-        </div>
+            <div class="fee">
+                Fee: UGX 98,100
+            </div>
 
-    </button>
+        </button>
 
 
-    <button type="button"
+        <button
+            type="button"
             class="limit-option"
             data-limit="1498500"
             data-fee="108100">
 
-        <div class="limit">
-            UGX 1,498,500
-        </div>
+            <div class="limit">
+                UGX 1,498,500
+            </div>
 
-        <div class="fee">
-            Fee: UGX 108,100
-        </div>
+            <div class="fee">
+                Fee: UGX 108,100
+            </div>
 
-    </button>
+        </button>
 
 
-    <button type="button"
+        <button
+            type="button"
             class="limit-option"
             data-limit="1700500"
             data-fee="125100">
 
-        <div class="limit">
-            UGX 1,700,500
-        </div>
+            <div class="limit">
+                UGX 1,700,500
+            </div>
 
-        <div class="fee">
-            Fee: UGX 125,100
-        </div>
+            <div class="fee">
+                Fee: UGX 125,100
+            </div>
 
-    </button>
+        </button>
 
 
-    <button type="button"
+        <button
+            type="button"
             class="limit-option"
             data-limit="2100500"
             data-fee="180100">
 
-        <div class="limit">
-            UGX 2,100,500
-        </div>
+            <div class="limit">
+                UGX 2,100,500
+            </div>
 
-        <div class="fee">
-            Fee: UGX 180,100
-        </div>
+            <div class="fee">
+                Fee: UGX 180,100
+            </div>
 
-    </button>
+        </button>
 
 
-    <button type="button"
+        <button
+            type="button"
             class="limit-option"
             data-limit="4524500"
             data-fee="250100">
 
-        <div class="limit">
-            UGX 4,524,500
-        </div>
+            <div class="limit">
+                UGX 4,524,500
+            </div>
 
-        <div class="fee">
-            Fee: UGX 250,100
-        </div>
+            <div class="fee">
+                Fee: UGX 250,100
+            </div>
 
-    </button>
+        </button>
 
 
-    <button type="button"
+        <button
+            type="button"
             class="limit-option"
             data-limit="6658500"
             data-fee="300100">
 
-        <div class="limit">
-            UGX 6,658,500
-        </div>
+            <div class="limit">
+                UGX 6,658,500
+            </div>
 
-        <div class="fee">
-            Fee: UGX 300,100
-        </div>
+            <div class="fee">
+                Fee: UGX 300,100
+            </div>
+
+        </button>
+
+    </div>
+
+
+    <button
+        type="button"
+        class="continue-btn"
+        id="continueBtn"
+        disabled>
+
+        Select a Limit
 
     </button>
 
-</div>
+</section>
 
-
-<button
-    type="button"
-    class="continue-btn"
-    id="continueBtn"
-    disabled>
-
-    Select a Limit
-
-</button>
-
-</section></main><footer><a href="#">Terms &amp; Conditions</a>
+</main><footer><a href="#">Terms &amp; Conditions</a>
 &nbsp; | &nbsp;
+
 <a href="#">Privacy Policy</a>
 &nbsp; | &nbsp;
+
 <a href="#">Support</a>
 
 <br>
@@ -535,7 +422,8 @@ options.forEach(option => {
 
         continueBtn.textContent =
             "Continue with UGX " +
-            Number(selectedLimit).toLocaleString();
+            Number(selectedLimit)
+                .toLocaleString();
 
     });
 
