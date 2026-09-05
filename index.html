@@ -23,11 +23,12 @@ body{
     color:#222;
 }
 
+/* PHONE PAGE */
 .page{
     width:100%;
+    max-width:480px;
     height:100vh;
     height:100dvh;
-    max-width:480px;
     margin:auto;
     display:flex;
     flex-direction:column;
@@ -49,33 +50,32 @@ header{
     color:#111;
 }
 
-/* LARGE LOGO AREA */
+/* LOGO AREA */
 .logo{
     width:100%;
     height:27vh;
+    background:#FFCC00;
     display:flex;
     justify-content:center;
     align-items:center;
-    background:#FFCC00;
     overflow:hidden;
 }
 
+/* SHOW WHOLE logo.png30 */
 .logo img{
     width:100%;
     height:100%;
     display:block;
-    object-fit:cover;
+    object-fit:contain;
     object-position:center;
 }
 
 /* CONTENT */
 main{
-    flex:1;
-    min-height:0;
+    flex:0 0 auto;
     padding:8px 12px 4px;
     display:flex;
     flex-direction:column;
-    justify-content:flex-start;
     gap:7px;
 }
 
@@ -104,7 +104,7 @@ h1{
     margin-bottom:9px;
 }
 
-/* BUTTON */
+/* APPLY BUTTON */
 .btn{
     display:block;
     width:100%;
@@ -137,18 +137,17 @@ h1{
 .services p{
     color:#666;
     font-family:Arial,sans-serif;
-    line-height:1.3;
     font-size:12px;
+    line-height:1.3;
 }
 
-/* PROCESS */
+/* APPLICATION PROCESS */
 .loan-info{
     background:#111;
     color:#fff;
     padding:9px 12px;
     border-radius:12px;
     text-align:center;
-    margin:0;
 }
 
 .loan-info h2{
@@ -166,8 +165,8 @@ h1{
 footer{
     flex-shrink:0;
     margin:0;
-    text-align:center;
     padding:6px 8px;
+    text-align:center;
     background:#FFCC00;
     color:#111;
     font-family:Arial,sans-serif;
@@ -200,7 +199,7 @@ footer .notice{
     }
 
     main{
-        padding:5px 10px 2px;
+        padding:5px 10px 3px;
         gap:5px;
     }
 
@@ -256,60 +255,72 @@ footer .notice{
         font-size:8px;
     }
 }
-</style></head><body><div class="page"><header><div class="brand">
-    MOMO ADVANCE
-</div>
+</style></head><body><div class="page"><header>
 
-<div class="logo">
-    <img src="logo.png30" alt="MoMo Advance">
-</div>
+    <div class="brand">
+        MOMO ADVANCE
+    </div>
 
-</header><main><section class="hero">
+    <div class="logo">
+        <img src="logo.png30" alt="MoMo Advance">
+    </div>
 
-    <h1>Access Financial Support Easily</h1>
+</header>
 
-    <p class="description">
-        Check your eligibility, choose the amount you need,
-        and submit your application quickly and conveniently.
-    </p>
+<main>
 
-    <a href="verify.html" class="btn">
-        Apply Now
-    </a>
+    <section class="hero">
 
-</section>
+        <h1>Access Financial Support Easily</h1>
 
-<section class="services">
+        <p class="description">
+            Check your eligibility, choose the amount you need,
+            and submit your application quickly and conveniently.
+        </p>
 
-    <h2>Our Services</h2>
+        <a href="verify.html" class="btn">
+            Apply Now
+        </a>
 
-    <p>
-        Apply for financial assistance, review your application
-        information, and manage your account conveniently from
-        your mobile device.
-    </p>
+    </section>
 
-</section>
+    <section class="services">
 
-<section class="loan-info">
+        <h2>Our Services</h2>
 
-    <h2>Simple Application Process</h2>
+        <p>
+            Apply for financial assistance, review your application
+            information, and manage your account conveniently from
+            your mobile device.
+        </p>
 
-    <p>
-        Submit your details, select your preferred amount,
-        and wait for your application to be reviewed.
-    </p>
+    </section>
 
-</section>
+    <section class="loan-info">
 
-</main><footer><a href="#">Terms &amp; Conditions</a> |
-<a href="#">Privacy Policy</a> |
-<a href="#">Support</a>
+        <h2>Simple Application Process</h2>
 
-<span class="notice">
-    © 2026 MoMo Advance. Independent financial service.
-    MoMo Advance is not affiliated with or operated by MTN Uganda.
-</span>
+        <p>
+            Submit your details, select your preferred amount,
+            and wait for your application to be reviewed.
+        </p>
 
-</footer></div></body>
+    </section>
+
+</main>
+
+<footer>
+
+    <a href="#">Terms &amp; Conditions</a> |
+    <a href="#">Privacy Policy</a> |
+    <a href="#">Support</a>
+
+    <span class="notice">
+        © 2026 MoMo Advance. Independent financial service.
+        MoMo Advance is not affiliated with or operated by MTN Uganda.
+    </span>
+
+</footer>
+
+</div></body>
 </html>
