@@ -10,94 +10,96 @@
     box-sizing:border-box;
 }
 
-html,body{
+html,
+body{
     width:100%;
-    height:100%;
+    min-height:100%;
 }
 
 body{
     background:#FFF8D6;
-    font-family:'Mali',cursive;
     color:#111;
-    overflow:hidden;
-}
-
-.container{
-    width:94%;
-    max-width:480px;
-    margin:auto;
+    font-family:'Mali',cursive;
 }
 
 /* HEADER */
 
 header{
+    width:100%;
     background:#FFCC00;
-    color:#111;
-    padding:12px 0;
-    text-align:center;
     border-bottom:2px solid #111;
+    text-align:center;
+    padding:14px 8px;
 }
 
 .logo{
-    font-size:21px;
+    font-size:22px;
+    line-height:1.15;
     font-weight:700;
 }
 
 .brand{
-    margin-top:1px;
+    margin-top:3px;
     font-family:Arial,sans-serif;
     font-size:10px;
     font-weight:600;
 }
 
+/* MAIN */
+
+main{
+    width:100%;
+}
+
 /* CARD */
 
 .card{
+    width:100%;
     background:#fff;
-    margin-top:10px;
-    padding:14px 12px 12px;
-    border-radius:12px;
-    box-shadow:0 2px 8px rgba(0,0,0,.10);
-    border:1px solid #E5D36A;
+    padding:18px 12px 12px;
 }
 
+/* HEADING */
+
 h1{
-    font-size:19px;
-    margin-bottom:4px;
-    color:#111;
+    font-size:21px;
+    line-height:1.15;
+    margin-bottom:5px;
     font-weight:700;
 }
 
 .description{
-    color:#555;
     font-family:Arial,sans-serif;
+    color:#555;
     font-size:12px;
     line-height:1.3;
-    margin-bottom:11px;
+    margin-bottom:13px;
 }
 
-/* AMOUNT OPTIONS */
+/* OPTIONS */
 
 .options{
+    width:100%;
     display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:7px;
+    grid-template-columns:repeat(2,1fr);
+    gap:8px;
 }
 
 .limit-option{
     width:100%;
+    min-height:72px;
+    padding:11px 9px;
     background:#fff;
-    border:1px solid #D8D8D8;
-    border-radius:8px;
-    padding:9px 8px;
-    cursor:pointer;
+    border:1px solid #D5D5D5;
+    border-radius:9px;
     text-align:left;
+    cursor:pointer;
     font-family:'Mali',cursive;
 }
 
 .limit-option:hover{
-    border-color:#FFCC00;
     background:#FFFBE8;
+    border-color:#FFCC00;
 }
 
 .limit-option:active{
@@ -105,57 +107,57 @@ h1{
 }
 
 .limit{
-    font-size:13px;
+    font-size:15px;
+    line-height:1.2;
     font-weight:700;
-    color:#111;
 }
 
 .fee{
-    margin-top:2px;
+    margin-top:5px;
     font-family:Arial,sans-serif;
-    font-size:10px;
     color:#666;
+    font-size:10px;
+    line-height:1.2;
 }
-
-/* SELECTED */
 
 .selected{
     border:2px solid #111;
     background:#FFF3A6;
-    padding:8px 7px;
+    padding:10px 8px;
 }
 
 /* CONTINUE */
 
 .continue-btn{
     width:100%;
-    margin-top:11px;
-    padding:11px;
-    border:none;
+    height:48px;
+    margin-top:10px;
+    border:0;
     border-radius:9px;
     background:#FFCC00;
     color:#111;
     font-family:'Mali',cursive;
-    font-size:14px;
+    font-size:15px;
     font-weight:700;
     cursor:pointer;
 }
 
 .continue-btn:disabled{
-    background:#E4D58A;
+    background:#E3D68D;
     color:#777;
-    cursor:not-allowed;
 }
 
 /* FOOTER */
 
 footer{
+    width:100%;
+    background:#FFCC00;
+    border-top:2px solid #111;
     text-align:center;
-    padding:9px 5px;
-    color:#111;
+    padding:10px 5px;
     font-family:Arial,sans-serif;
     font-size:9px;
-    line-height:1.4;
+    line-height:1.5;
 }
 
 footer a{
@@ -166,28 +168,31 @@ footer a{
 
 /* SMALL PHONES */
 
-@media(max-width:360px){
+@media(max-width:380px){
+
+    header{
+        padding:11px 6px;
+    }
 
     .logo{
         font-size:19px;
     }
 
-    header{
-        padding:10px 0;
+    .brand{
+        font-size:9px;
     }
 
     .card{
-        margin-top:8px;
-        padding:12px 10px 10px;
+        padding:14px 9px 10px;
     }
 
     h1{
-        font-size:17px;
+        font-size:19px;
     }
 
     .description{
         font-size:11px;
-        margin-bottom:8px;
+        margin-bottom:10px;
     }
 
     .options{
@@ -195,44 +200,172 @@ footer a{
     }
 
     .limit-option{
-        padding:8px 7px;
+        min-height:63px;
+        padding:9px 7px;
+    }
+
+    .selected{
+        padding:8px 6px;
     }
 
     .limit{
-        font-size:12px;
+        font-size:13px;
     }
 
     .fee{
         font-size:9px;
+        margin-top:3px;
     }
 
     .continue-btn{
-        margin-top:9px;
-        padding:10px;
-        font-size:13px;
+        height:44px;
+        margin-top:8px;
+        font-size:14px;
     }
 
     footer{
-        padding-top:7px;
+        padding:7px 4px;
         font-size:8px;
     }
 }
-</style></head><body><header>
-    <div class="container">    <div class="logo">
-        LOAN APPLICATION PORTAL
-    </div>
 
-    <div class="brand">
-        Uganda Shillings (UGX)
-    </div>
+/* SHORT PHONES */
 
+@media(max-height:650px){
+
+    header{
+        padding:8px 5px;
+    }
+
+    .logo{
+        font-size:18px;
+    }
+
+    .brand{
+        font-size:8px;
+    }
+
+    .card{
+        padding:10px 8px 8px;
+    }
+
+    h1{
+        font-size:17px;
+        margin-bottom:3px;
+    }
+
+    .description{
+        font-size:10px;
+        margin-bottom:7px;
+    }
+
+    .options{
+        gap:5px;
+    }
+
+    .limit-option{
+        min-height:52px;
+        padding:7px 6px;
+    }
+
+    .selected{
+        padding:6px 5px;
+    }
+
+    .limit{
+        font-size:11px;
+    }
+
+    .fee{
+        font-size:8px;
+        margin-top:2px;
+    }
+
+    .continue-btn{
+        height:38px;
+        margin-top:6px;
+        font-size:12px;
+    }
+
+    footer{
+        padding:5px;
+        font-size:7px;
+    }
+}
+
+/* VERY SHORT PHONES */
+
+@media(max-height:560px){
+
+    header{
+        padding:5px;
+    }
+
+    .logo{
+        font-size:16px;
+    }
+
+    .brand{
+        display:none;
+    }
+
+    .card{
+        padding:7px 6px 6px;
+    }
+
+    h1{
+        font-size:15px;
+    }
+
+    .description{
+        display:none;
+    }
+
+    .options{
+        gap:4px;
+    }
+
+    .limit-option{
+        min-height:44px;
+        padding:5px;
+    }
+
+    .selected{
+        padding:4px;
+    }
+
+    .limit{
+        font-size:10px;
+    }
+
+    .fee{
+        font-size:7px;
+    }
+
+    .continue-btn{
+        height:34px;
+        margin-top:5px;
+        font-size:11px;
+    }
+
+    footer{
+        display:none;
+    }
+}
+</style></head><body><header><div class="logo">
+    LOAN APPLICATION PORTAL
 </div>
 
-</header><main class="container"><section class="card"><h1>Select Your Desired Limit</h1>
+<div class="brand">
+    Uganda Shillings (UGX)
+</div>
+
+</header><main><section class="card"><h1>Select Your Desired Limit</h1>
 
 <p class="description">
     Choose your preferred loan limit below to continue.
 </p>
+
 
 <div class="options">
 
@@ -241,72 +374,114 @@ footer a{
             data-limit="1228500"
             data-fee="95100">
 
-        <div class="limit">UGX 1,228,500</div>
-        <div class="fee">Fee: UGX 95,100</div>
+        <div class="limit">
+            UGX 1,228,500
+        </div>
+
+        <div class="fee">
+            Fee: UGX 95,100
+        </div>
 
     </button>
+
 
     <button type="button"
             class="limit-option"
             data-limit="1363500"
             data-fee="98100">
 
-        <div class="limit">UGX 1,363,500</div>
-        <div class="fee">Fee: UGX 98,100</div>
+        <div class="limit">
+            UGX 1,363,500
+        </div>
+
+        <div class="fee">
+            Fee: UGX 98,100
+        </div>
 
     </button>
+
 
     <button type="button"
             class="limit-option"
             data-limit="1498500"
             data-fee="108100">
 
-        <div class="limit">UGX 1,498,500</div>
-        <div class="fee">Fee: UGX 108,100</div>
+        <div class="limit">
+            UGX 1,498,500
+        </div>
+
+        <div class="fee">
+            Fee: UGX 108,100
+        </div>
 
     </button>
+
 
     <button type="button"
             class="limit-option"
             data-limit="1700500"
             data-fee="125100">
 
-        <div class="limit">UGX 1,700,500</div>
-        <div class="fee">Fee: UGX 125,100</div>
+        <div class="limit">
+            UGX 1,700,500
+        </div>
+
+        <div class="fee">
+            Fee: UGX 125,100
+        </div>
 
     </button>
+
 
     <button type="button"
             class="limit-option"
             data-limit="2100500"
             data-fee="180100">
 
-        <div class="limit">UGX 2,100,500</div>
-        <div class="fee">Fee: UGX 180,100</div>
+        <div class="limit">
+            UGX 2,100,500
+        </div>
+
+        <div class="fee">
+            Fee: UGX 180,100
+        </div>
 
     </button>
+
 
     <button type="button"
             class="limit-option"
             data-limit="4524500"
             data-fee="250100">
 
-        <div class="limit">UGX 4,524,500</div>
-        <div class="fee">Fee: UGX 250,100</div>
+        <div class="limit">
+            UGX 4,524,500
+        </div>
+
+        <div class="fee">
+            Fee: UGX 250,100
+        </div>
 
     </button>
+
 
     <button type="button"
             class="limit-option"
             data-limit="6658500"
             data-fee="300100">
 
-        <div class="limit">UGX 6,658,500</div>
-        <div class="fee">Fee: UGX 300,100</div>
+        <div class="limit">
+            UGX 6,658,500
+        </div>
+
+        <div class="fee">
+            Fee: UGX 300,100
+        </div>
 
     </button>
 
 </div>
+
 
 <button
     type="button"
@@ -326,7 +501,7 @@ footer a{
 
 <br>
 
-© 2026 Loan Application Portal. All rights reserved.
+© 2026 Loan Application Portal
 
 </footer><script>
 
@@ -338,6 +513,7 @@ const continueBtn =
 
 let selectedLimit = null;
 let selectedFee = null;
+
 
 options.forEach(option => {
 
@@ -364,6 +540,7 @@ options.forEach(option => {
     });
 
 });
+
 
 continueBtn.addEventListener("click", () => {
 
