@@ -1,7 +1,7 @@
 <!DOCTYPE html><html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>MTNMobMoney - Apply Now</title><style>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>MoMo Advance - Apply Now</title><style>
 @import url('https://fonts.googleapis.com/css2?family=Mali:wght@400;500;600;700&display=swap');
 
 *{
@@ -25,9 +25,20 @@ body{
 header{
     background:#FFCC00;
     color:#111;
-    padding:8px 0;
+    padding:6px 0 8px;
     overflow:hidden;
     border-bottom:1px solid #111;
+}
+
+/* TITLE ABOVE LOGO */
+.logo-title{
+    width:100%;
+    text-align:center;
+    font-size:24px;
+    font-weight:700;
+    line-height:1.2;
+    margin-bottom:4px;
+    color:#111;
 }
 
 .logo{
@@ -38,31 +49,12 @@ header{
 
 .logo img{
     width:100%;
-    max-width:390px;
+    max-width:480px;
     height:300px;
     object-fit:contain;
     display:block;
     margin:0 auto;
     border-radius:12px;
-}
-
-.brand{
-    width:100%;
-    font-size:20px;
-    font-weight:700;
-    text-align:left;
-    white-space:nowrap;
-    margin-bottom:10px;
-    color:#111;
-}
-
-.notification{
-    background:white;
-    margin:18px 0;
-    padding:14px;
-    border-radius:10px;
-    box-shadow:0 2px 8px rgba(0,0,0,.08);
-    font-size:14px;
 }
 
 .hero{
@@ -71,7 +63,6 @@ header{
     padding:18px 16px;
     text-align:center;
     box-shadow:0 2px 10px rgba(0,0,0,.07);
-    margin-top:0;
 }
 
 h1{
@@ -104,7 +95,6 @@ h1{
     cursor:pointer;
     text-decoration:none;
     text-align:center;
-    box-shadow:0 2px 0 #111;
 }
 
 .services{
@@ -146,13 +136,28 @@ footer a{
     text-decoration:none;
 }
 
-footer .phone{
-    display:block;
-    margin-top:4px;
-    white-space:nowrap;
+@media(max-width:360px){
+    .logo-title{
+        font-size:21px;
+    }
+
+    .logo img{
+        height:270px;
+    }
+
+    h1{
+        font-size:22px;
+    }
+
+    .description{
+        font-size:15px;
+        margin-bottom:18px;
+    }
 }
 </style></head><body><header>
-    <div class="container">    <div class="brand"></div>
+    <div class="container">    <div class="logo-title">
+        MoMo Advance
+    </div>
 
     <div class="logo">
         <img src="logo.png30" alt="MTNMobMoney Logo">
@@ -193,7 +198,7 @@ footer .phone{
 
 <br>
 
-© 2026 MTNMobMoney Services Portal
+© 2026 MoMo Advance Services Portal
 
 </footer></body>
 </html>
