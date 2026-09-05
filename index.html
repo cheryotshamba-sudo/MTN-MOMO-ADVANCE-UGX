@@ -27,10 +27,14 @@ body{
     margin:auto;
 }
 
+/* =========================
+   YELLOW LOGO SECTION
+========================= */
+
 header{
     background:#FFCC00;
     color:#111;
-    padding:8px 0;
+    padding:0;
     overflow:hidden;
     border-bottom:1px solid #E6B800;
 }
@@ -40,34 +44,56 @@ header{
     font-size:24px;
     font-weight:700;
     text-align:center;
-    margin-bottom:8px;
+    margin:0;
+    padding:10px 0;
     color:#111;
+    background:#FFCC00;
 }
 
+/* Full-width logo area */
 .logo{
     width:100%;
-    text-align:center;
-    line-height:1;
+    height:430px;
+    overflow:hidden;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#FFCC00;
 }
 
+/* Image fills the entire yellow area */
 .logo img{
     width:100%;
-    max-width:390px;
-    height:230px;
-    object-fit:contain;
+    height:100%;
+    max-width:none;
+    object-fit:cover;
+    object-position:center center;
     display:block;
-    margin:0 auto;
-    border-radius:12px;
+    margin:0;
+    border-radius:0;
 }
 
-.notification{
-    background:white;
-    margin:18px 0;
-    padding:14px;
-    border-radius:10px;
-    box-shadow:0 2px 8px rgba(0,0,0,.08);
-    font-size:14px;
+/* Smaller screens */
+@media(max-width:380px){
+    .logo{
+        height:380px;
+    }
+
+    .brand{
+        font-size:22px;
+    }
 }
+
+/* Larger phones */
+@media(min-width:481px){
+    .logo{
+        height:480px;
+    }
+}
+
+/* =========================
+   MAIN CONTENT
+========================= */
 
 .hero{
     background:white;
@@ -188,16 +214,12 @@ footer .notice{
 
 <header>
 
-    <div class="container">
+    <div class="brand">
+        MOMO ADVANCE
+    </div>
 
-        <div class="brand">
-            MOMO ADVANCE 
-        </div>
-
-        <div class="logo">
-            <img src="logo.png30" alt="MoMo Advanc">
-        </div>
-
+    <div class="logo">
+        <img src="logo.png30" alt="MoMo Advance">
     </div>
 
 </header>
