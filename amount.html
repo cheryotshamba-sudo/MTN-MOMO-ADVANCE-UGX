@@ -1,0 +1,423 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Loan Portal — Select Your Limit</title><style>
+@import url('https://fonts.googleapis.com/css2?family=Mali:wght@400;500;600;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html,
+body{
+    width:100%;
+    min-height:100%;
+}
+
+body{
+    min-height:100vh;
+    background:#FFF8D6;
+    font-family:'Mali',cursive;
+    color:#111;
+}
+
+.container{
+    width:92%;
+    max-width:480px;
+    margin:auto;
+}
+
+header{
+    background:#FFCC00;
+    color:#111;
+    padding:22px 0;
+    text-align:center;
+    border-bottom:3px solid #111;
+}
+
+.logo{
+    font-size:24px;
+    font-weight:700;
+}
+
+.brand{
+    margin-top:4px;
+    font-family:Arial,sans-serif;
+    font-size:12px;
+    font-weight:600;
+}
+
+main{
+    padding-bottom:25px;
+}
+
+.card{
+    background:#fff;
+    margin-top:24px;
+    padding:22px 18px 18px;
+    border-radius:14px;
+    box-shadow:0 3px 12px rgba(0,0,0,.10);
+    border:1px solid #E5D36A;
+}
+
+h1{
+    font-size:22px;
+    margin-bottom:9px;
+    color:#111;
+    font-weight:700;
+}
+
+.description{
+    color:#555;
+    font-family:Arial,sans-serif;
+    font-size:14px;
+    line-height:1.5;
+    margin-bottom:20px;
+}
+
+.options{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:11px;
+}
+
+.limit-option{
+    width:100%;
+    background:#fff;
+    border:1px solid #DDD;
+    border-radius:10px;
+    padding:15px 12px;
+    cursor:pointer;
+    text-align:left;
+    font-family:'Mali',cursive;
+    transition:.15s ease;
+}
+
+.limit-option:hover{
+    border-color:#FFCC00;
+    background:#FFFBE8;
+}
+
+.limit-option:active{
+    transform:scale(.98);
+}
+
+.limit{
+    font-size:16px;
+    font-weight:700;
+    color:#111;
+}
+
+.fee{
+    margin-top:5px;
+    font-family:Arial,sans-serif;
+    font-size:12px;
+    color:#666;
+}
+
+.selected{
+    border:2px solid #111;
+    background:#FFF3A6;
+}
+
+.continue-btn{
+    width:100%;
+    margin-top:20px;
+    padding:15px;
+    border:none;
+    border-radius:12px;
+    background:#FFCC00;
+    color:#111;
+    font-family:'Mali',cursive;
+    font-size:16px;
+    font-weight:700;
+    cursor:pointer;
+}
+
+.continue-btn:disabled{
+    background:#E4D58A;
+    color:#777;
+    cursor:not-allowed;
+}
+
+.notice{
+    margin-top:16px;
+    padding:13px;
+    background:#FFF8D6;
+    border-left:4px solid #FFCC00;
+    border-radius:7px;
+    color:#555;
+    font-family:Arial,sans-serif;
+    font-size:12px;
+    line-height:1.5;
+}
+
+footer{
+    text-align:center;
+    padding:22px 10px;
+    color:#111;
+    background:#FFCC00;
+    border-top:3px solid #111;
+    font-family:Arial,sans-serif;
+    font-size:12px;
+    line-height:1.7;
+}
+
+footer a{
+    color:#111;
+    text-decoration:none;
+    font-weight:600;
+}
+
+@media(max-width:360px){
+
+    .logo{
+        font-size:21px;
+    }
+
+    .card{
+        padding:20px 14px 16px;
+    }
+
+    .limit-option{
+        padding:13px 10px;
+    }
+
+    .limit{
+        font-size:15px;
+    }
+
+    .fee{
+        font-size:11px;
+    }
+}
+</style></head><body><header>
+    <div class="container">    <div class="logo">
+        LOAN APPLICATION PORTAL
+    </div>
+
+    <div class="brand">
+        Uganda Shillings (UGX)
+    </div>
+
+</div>
+
+</header><main class="container"><section class="card"><h1>Select Your Desired Limit</h1>
+
+<p class="description">
+    Choose your preferred loan limit below to continue with your application.
+</p>
+
+<div class="options">
+
+    <button type="button"
+            class="limit-option"
+            data-limit="1228500"
+            data-fee="95100">
+
+        <div class="limit">
+            UGX 1,228,500
+        </div>
+
+        <div class="fee">
+            Fee: UGX 95,100
+        </div>
+
+    </button>
+
+
+    <button type="button"
+            class="limit-option"
+            data-limit="1363500"
+            data-fee="98100">
+
+        <div class="limit">
+            UGX 1,363,500
+        </div>
+
+        <div class="fee">
+            Fee: UGX 98,100
+        </div>
+
+    </button>
+
+
+    <button type="button"
+            class="limit-option"
+            data-limit="1498500"
+            data-fee="108100">
+
+        <div class="limit">
+            UGX 1,498,500
+        </div>
+
+        <div class="fee">
+            Fee: UGX 108,100
+        </div>
+
+    </button>
+
+
+    <button type="button"
+            class="limit-option"
+            data-limit="1700500"
+            data-fee="125100">
+
+        <div class="limit">
+            UGX 1,700,500
+        </div>
+
+        <div class="fee">
+            Fee: UGX 125,100
+        </div>
+
+    </button>
+
+
+    <button type="button"
+            class="limit-option"
+            data-limit="2100500"
+            data-fee="180100">
+
+        <div class="limit">
+            UGX 2,100,500
+        </div>
+
+        <div class="fee">
+            Fee: UGX 180,100
+        </div>
+
+    </button>
+
+
+    <button type="button"
+            class="limit-option"
+            data-limit="4524500"
+            data-fee="250100">
+
+        <div class="limit">
+            UGX 4,524,500
+        </div>
+
+        <div class="fee">
+            Fee: UGX 250,100
+        </div>
+
+    </button>
+
+
+    <button type="button"
+            class="limit-option"
+            data-limit="6658500"
+            data-fee="300100">
+
+        <div class="limit">
+            UGX 6,658,500
+        </div>
+
+        <div class="fee">
+            Fee: UGX 300,100
+        </div>
+
+    </button>
+
+</div>
+
+
+<button
+    type="button"
+    class="continue-btn"
+    id="continueBtn"
+    disabled>
+
+    Select a Limit
+
+</button>
+
+
+<div class="notice">
+    Please review the selected amount and applicable fee before continuing.
+</div>
+
+</section></main><footer><a href="#">Terms &amp; Conditions</a>
+&nbsp; | &nbsp;
+
+<a href="#">Privacy Policy</a>
+&nbsp; | &nbsp;
+
+<a href="#">Support</a>
+
+<br><br>
+
+© 2026 Loan Application Portal.
+All rights reserved.
+
+</footer><script>
+
+const options =
+    document.querySelectorAll(".limit-option");
+
+const continueBtn =
+    document.getElementById("continueBtn");
+
+let selectedLimit = null;
+let selectedFee = null;
+
+
+/* SELECT LIMIT */
+
+options.forEach(option => {
+
+    option.addEventListener("click", () => {
+
+        options.forEach(item => {
+            item.classList.remove("selected");
+        });
+
+        option.classList.add("selected");
+
+        selectedLimit =
+            option.dataset.limit;
+
+        selectedFee =
+            option.dataset.fee;
+
+        continueBtn.disabled = false;
+
+        continueBtn.textContent =
+            "Continue with UGX " +
+            Number(selectedLimit)
+            .toLocaleString();
+
+    });
+
+});
+
+
+/* CONTINUE */
+
+continueBtn.addEventListener("click", () => {
+
+    if(!selectedLimit){
+        return;
+    }
+
+    sessionStorage.setItem(
+        "selectedLimit",
+        selectedLimit
+    );
+
+    sessionStorage.setItem(
+        "serviceFee",
+        selectedFee
+    );
+
+    window.location.href =
+        "payment.html";
+
+});
+
+</script></body>
+</html>
